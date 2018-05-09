@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kazer.androidroom.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey">
+
+        <ImageButton
+            android:id="@+id/wswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/crate"
+            android:layout_alignStart="@+id/wallL1anim"
+            android:contentDescription="walllight"
+            app:srcCompat="@drawable/switch_on" />
+
+        <ImageView
+            android:id="@+id/beam1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="22dp"
+            android:layout_toEndOf="@+id/wswitch"
+            android:contentDescription="wall light"
+            app:srcCompat="@drawable/beam" />
+
+        <ImageView
+            android:id="@+id/beam2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="117dp"
+            android:contentDescription="beam"
+            app:srcCompat="@drawable/beam" />
+
+        <ImageView
+            android:id="@+id/floor"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="floor"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/floor" />
+
+        <ImageView
+            android:id="@+id/Wwindow"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignTop="@+id/wallL2"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="false"
+            android:contentDescription="window"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/window_day" />
+
+        <ViewAnimator
+            android:id="@+id/wallL2anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Wwindow"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17dp">
+
+            <ImageView
+                android:id="@+id/wallL2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_below="@+id/Wwindow"
+                android:layout_toStartOf="@+id/wallL2anim"
+                app:srcCompat="@drawable/wall_light_w" />
+        </ViewAnimator>
+
+        <ViewAnimator
+            android:id="@+id/wallL1anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Wwindow"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp">
+
+        </ViewAnimator>
+
+        <ImageView
+            android:id="@+id/crate"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/crate"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="50dp" />
+
+        <ImageView
+            android:id="@+id/wallL1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_above="@+id/wallL1anim"
+            android:layout_alignStart="@+id/wallL1anim"
+            app:srcCompat="@drawable/wall_light_w" />
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
